@@ -1,9 +1,0 @@
-:root {
-    --color-primary: #1F2B6C;
-    --color-accent: #DFEAFF;
-    --color-secondary: rgba(21, 158, 236, 0.5);
-  }
-  .btn-primary{
-    background-color: rgba(21, 158, 236, 0.5);
-    border: none;
-  }

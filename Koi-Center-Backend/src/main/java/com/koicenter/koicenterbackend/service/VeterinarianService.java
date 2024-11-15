@@ -54,7 +54,7 @@ public class VeterinarianService {
             veterinarianResponse.setVetId(veterinarian.getVetId());
             veterinarianResponse.setVetStatus(veterinarian.getStatus());
             veterinarianResponse.setDescription(veterinarian.getDescription());
-            veterinarianResponse.setGoogleMeet("localhost:9000");
+            veterinarianResponse.setGoogleMeet(veterinarian.getGoogleMeet());
             veterinarianResponse.setPhone(veterinarian.getPhone());
             veterinarianResponse.setImageVeterinarian(veterinarian.getImage());
             List<String> serviceNames = new ArrayList<>();
