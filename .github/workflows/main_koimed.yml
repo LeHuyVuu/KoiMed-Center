@@ -1,7 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy JAR app to Azure Web App - koimed
+name: Build and deploy JAR app to Azure Web App - Koi-Center-Backend
 
 on:
   push:
@@ -14,22 +11,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v4
 
+      # Set up Java version
       - name: Set up Java version
         uses: actions/setup-java@v4
         with:
-          java-version: 'java21'
+          java-version: '21'
           distribution: 'microsoft'
 
+      # Navigate to the Koi-Center-Backend folder and build with Maven
       - name: Build with Maven
+        working-directory: Koi-Center-Backend
         run: mvn clean install
 
+      # Upload the build artifact
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          name: koi-center-backend
+          path: 'Koi-Center-Backend/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -37,18 +39,20 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-      
+
     steps:
+      # Download the artifact from the build job
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: java-app
-      
+          name: koi-center-backend
+
+      # Deploy to Azure Web App
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'koimed'
+          app-name: 'koi-center-backend'  # Change to the app service name for your backend
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BF3A54F67B34111A626713266920291 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_backend }}
