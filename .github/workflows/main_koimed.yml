@@ -1,4 +1,4 @@
-name: Build and deploy JAR app to Azure Web App - Koi-Center-Backend
+name: Build and deploy JAR app to Azure Web App - Koi
 
 on:
   push:
@@ -56,6 +56,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'koi-center-backend'  # Tên ứng dụng của bạn trong Azure Web App
+          app-name: 'koi'  # Tên ứng dụng chính xác từ Azure
           slot-name: 'Production'
           package: '*.jar'
