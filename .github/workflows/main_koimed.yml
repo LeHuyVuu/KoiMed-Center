@@ -12,11 +12,11 @@ jobs:
 
     steps:
       # Checkout the repository
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       # Set up Java version
       - name: Set up Java version
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '21'
           distribution: 'microsoft'
@@ -28,7 +28,7 @@ jobs:
 
       # Upload the build artifact
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: koi-center-backend
           path: 'Koi-Center-Backend/target/*.jar'
@@ -41,9 +41,15 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+      # Login to Azure
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       # Download the artifact from the build job
       - name: Download artifact from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: koi-center-backend
 
@@ -55,4 +61,3 @@ jobs:
           app-name: 'koi-center-backend'  # Change to the app service name for your backend
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_backend }}
