@@ -38,26 +38,24 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      # Login to Azure
+      # Step 1: Azure Login
       - name: Azure Login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # Download the artifact from the build job
+      # Step 2: Download the artifact from the build job
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: koi-center-backend
 
-      # Deploy to Azure Web App
+      # Step 3: Deploy to Azure Web App
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'koi-center-backend'  # Change to the app service name for your backend
+          app-name: 'koi-center-backend'  # Tên ứng dụng của bạn trong Azure Web App
           slot-name: 'Production'
           package: '*.jar'
