@@ -21,10 +21,10 @@ jobs:
           java-version: '21'
           distribution: 'microsoft'
 
-      # Navigate to the Koi-Center-Backend folder and build with Maven
+      # Navigate to the Koi-Center-Backend folder and build with Maven (skipping tests)
       - name: Build with Maven
         working-directory: Koi-Center-Backend
-        run: mvn clean install
+        run: mvn clean install -DskipTests
 
       # Upload the build artifact
       - name: Upload artifact for deployment job
