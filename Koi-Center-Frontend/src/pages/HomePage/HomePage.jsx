@@ -112,7 +112,7 @@ function HomePage() {
 
             <div className="container py-5">
                 <h6 className="text-center text-uppercase text-primary mb-2">Care you can believe in</h6>
-                <h2 className="text-center mb-5">Our Services</h2>
+                <h2 className="text-center mb-5">Our Services Here</h2>
                 <div className="row">
                     <div className="col-md-4">
                         <div className="list-group">
