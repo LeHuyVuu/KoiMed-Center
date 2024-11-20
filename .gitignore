@@ -17,7 +17,7 @@ Thumbs.db
 .idea/
 
 # Ignore the target directory in the Spring Boot project (Koi-Center-Backend)
-
+Koi-Center-Backend/target/
 
 # Ignore Maven wrapper files
 Koi-Center-Backend/.mvn/
