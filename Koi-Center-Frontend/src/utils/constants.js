@@ -1,4 +1,4 @@
-export const API_ROOT = "http://localhost:8080/api/v1";
+export const API_ROOT = "https://koimed-ahbbctd6gad7awas.southeastasia-01.azurewebsites.net/api/v1";
 export const ROLE = {
   MANAGER: "MANAGER",
   CUSTOMER: "CUSTOMER",
