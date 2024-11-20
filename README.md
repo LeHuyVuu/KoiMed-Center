@@ -1,3 +1,4 @@
+[![Build and deploy JAR app to Azure Web App - koimed](https://github.com/LeHuyVuu/KoiMed-Center/actions/workflows/main_koimed.yml/badge.svg)](https://github.com/LeHuyVuu/KoiMed-Center/actions/workflows/main_koimed.yml)
 # 🌊 **Koi Veterinary Service Center** 🐟  
 
 ## 📝 **Introduction**  
