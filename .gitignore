@@ -35,7 +35,6 @@ Koi-Center-Backend/mvnw.cmd
 *.swo
 
 # Ignore environment-specific files
-.env
 
 # Ignore IntelliJ IDEA specific files (for Java/Spring Boot project)
 Koi-Center-Backend/.idea/
