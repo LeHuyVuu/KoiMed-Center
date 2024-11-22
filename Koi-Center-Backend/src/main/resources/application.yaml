@@ -28,4 +28,4 @@ server:
 
 app:
   payment:
-    success-url: http://localhost:3000
+    success-url: https://koi-med-center-service.vercel.app
