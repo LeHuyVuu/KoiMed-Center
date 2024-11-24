@@ -81,7 +81,7 @@ function HomePage() {
                             <div className="service-card bg-green-100 hover:bg-green-200 p-4 rounded-lg shadow-md">
                                 <div className="text-center-custom text-center">
                                     <i className="fas fa-video text-4xl mb-4 text-success"></i>
-                                    <h3 className="h5 font-weight-semibold mb-2">Online</h3>
+                                    <h3 className="h5 font-weight-semibold mb-2">Online Consulation</h3>
                                     <p className="text-gray-600">Connect with healthcare professionals through online video consultations.</p>
                                 </div>
                             </div>
