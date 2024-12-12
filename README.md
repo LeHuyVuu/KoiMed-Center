@@ -1,8 +1,8 @@
 [![Build and deploy JAR app to Azure Web App - koimed](https://github.com/LeHuyVuu/KoiMed-Center/actions/workflows/main_koimed.yml/badge.svg)](https://github.com/LeHuyVuu/KoiMed-Center/actions/workflows/main_koimed.yml)
-# 🌊 **Koi Veterinary Service Center** 🐟  
+# 🌊 **KoiMed Center** 🐟  
 
 ## 📝 **Introduction**  
-Welcome to the **Koi Veterinary Service Center**, a platform dedicated to providing professional care for Koi fish. This software simplifies the management of consultations, pond assessments, treatment, prescriptions, and customer feedback, ensuring a seamless experience for both staff and customers.  
+Welcome to the **KoiMed Center**, a platform dedicated to providing professional care for Koi fish. This software simplifies the management of consultations, pond assessments, treatment, prescriptions, and customer feedback, ensuring a seamless experience for both staff and customers.  
 
 ---
 
