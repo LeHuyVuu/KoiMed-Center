@@ -29,7 +29,7 @@ public class AppointmentController {
     @Autowired
     PondTreatmentService pondTreatmentService;
     @Autowired
-    KoiTreatmentService koiTreatmentService;
+    KoiTreatmentService  koiTreatmentService;
     // Get All appointment
     @Autowired
     AppointmentService appointmentService;
